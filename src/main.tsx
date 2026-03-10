@@ -7,7 +7,6 @@ import useAuthFromKinde from "./hooks/useAuthFromKinde.ts";
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
 
-
 createRoot(document.getElementById("root")!).render(
   <KindeProvider
     clientId={import.meta.env.VITE_KINDE_CLIENT_ID}
