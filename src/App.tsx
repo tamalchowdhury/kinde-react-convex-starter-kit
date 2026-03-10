@@ -1,11 +1,22 @@
-import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 import LoggedIn from "./components/LoggedIn";
 import LoggedOut from "./components/LoggedOut";
+import { Authenticated, Unauthenticated, useConvexAuth } from "convex/react";
 
 export default function App() {
-  const { isLoading, isAuthenticated } = useKindeAuth();
+  const { isLoading } = useConvexAuth();
 
-  if (isLoading) return <>Loading...</>;
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
-  return isAuthenticated ? <LoggedIn /> : <LoggedOut />;
+  return (
+    <>
+      <Authenticated>
+        <LoggedIn />
+      </Authenticated>
+      <Unauthenticated>
+        <LoggedOut />
+      </Unauthenticated>
+    </>
+  );
 }

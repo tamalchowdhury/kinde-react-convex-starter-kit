@@ -8,7 +8,7 @@ export default function LoggedOut() {
     <>
       <header>
         <nav className="nav container">
-          <h1 className="text-display-3">KindeAuth</h1>
+          <h1 className="text-display-3">Kinde + Convex</h1>
           <div>
             <LoginLink className="btn btn-ghost sign-in-btn">Sign in</LoginLink>
             <RegisterLink className="btn btn-dark">Sign up</RegisterLink>
