@@ -54,3 +54,5 @@ Click on `Sign up` and register your first user for your business!
 ## View users in Kinde
 
 If you navigate to the "Users" page within Kinde you will see your newly registered user there. 🚀
+
+Learn more about how to [Integrate Convex with Kinde](https://docs.kinde.com/integrate/third-party-tools/kinde-and-convex/)
