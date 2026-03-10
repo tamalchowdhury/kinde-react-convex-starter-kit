@@ -3,6 +3,7 @@ import { useCallback, useMemo } from "react";
 
 export default function useAuthFromKinde() {
   const { isLoading, isAuthenticated, getIdToken } = useKindeAuth();
+  // Convex requires this function to be named `fetchAccessToken` 
   const fetchAccessToken = useCallback(
     async ({
       forceRefreshToken,
