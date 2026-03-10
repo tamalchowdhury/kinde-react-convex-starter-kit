@@ -1,4 +1,4 @@
-# Kinde Starter Kit - React
+# Kinde Starter Kit - React + Convex
 
 ## Register an account on Kinde
 
@@ -8,7 +8,7 @@ To get started set up an account on [Kinde](https://app.kinde.com/register).
 
 Clone this repo and install dependencies by running `npm i`
 
-Make a copy of `.env_sample` and name it simply `.env`. Set the following values from the Kinde `Settings -> Applications -> Frontend app` page.
+Make a copy of `.env_sample` and name it simply `.env`. Set the following values from the Kinde `Settings > Applications > Frontend app` page.
 
 - `VITE_KINDE_CLIENT_ID` with the `Client ID` value
 - `VITE_KINDE_DOMAIN` with the `Domain` value
@@ -26,11 +26,24 @@ Your user will be redirected to Kinde to authenticate. After they have logged in
 
 You need to specify in Kinde which url you would like your user to be redirected to in order to authenticate your app.
 
-On the `Settings -> Applications -> Frontend app` page set `Allowed callback URLs` to `http://localhost:3000`
+On the `Settings > Applications > Frontend app` page set `Allowed callback URLs` to `http://localhost:3000`
 
 > Important! This is required for your users to successfully log in to your app.
 
 You will also need to set the url they will be redirected to upon logout. Set the ` Allowed logout redirect URLs` to http://localhost:3000.
+
+## Setup convex dev project
+
+Run the following command:
+
+```bash
+npx convex dev
+```
+
+When prompted, add the following environment variables from your Kinde application to Convex dashboard:
+
+- `VITE_KINDE_CLIENT_ID`
+- `VITE_KINDE_DOMAIN`
 
 ## Start your app
 
